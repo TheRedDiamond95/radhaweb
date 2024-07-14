@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <p>NOTE: As prices are everchanging, your services will be evaluated and charged after your appointment has concluded. </p>
+  <style>
+    /* Add some basic styling to the cart */
+    .cart {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cart</h1>
+  <div id="cartItems"></div>
+
+  <script>
+    // JavaScript code to handle the click event and update the cart
+    const addToCart = (service) => {
+      const cartItems = document.getElementById('cartItems');
+      const cartItem = document.createElement('div');
+      cartItem.classList.add('cart');
+      cartItem.textContent = service;
+      cartItems.appendChild(cartItem);
+    };
+
+    // Example usage: add a service to the cart when the button is clicked
+    const addButton = document.getElementById('addButton');
+    addButton.addEventListener('click', () => {
+      const service = 'Example Service';
+      addToCart(service);
+    });
+  </script>
+</body>
+</html>
